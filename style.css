@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.small-gif {
+    width: 7%;
+    height: 11%
+  }
+
+  
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-style:initial ;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color:#cc2626;
+    color: white ;
+    
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIsCg8rHM0PfP-EKqkMEGrmh0VOolvnMw9Q&usqp=CAU') no-repeat left center/8% auto white;
+  background-color: white;
+  color: black;
+  position: relative;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-size: 80px 80px;
+  padding-left: 100px;
+  border: 2px solid black;
+}
+
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.warning {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.amounts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.amount {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 150px;
+}
+
+.amount:hover {
+    transform: translateY(-5px);
+}
+
+.amount.selected {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: #fff;
+}
+
+form {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(23, 151, 123);
+    width: 100%;
+}
+
+.wallet {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.address {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.address span {
+    font-weight: bold;
+}
+
+.balance {
+    font-size: 1.2rem;
+}
+
+.balance span {
+    font-weight: bold;
+}
+
+.fa-spinner {
+    margin: 0 auto;
+    display: block;
+    font-size: 0.2rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.warning-message {
+  font-family: monospace;
+   font-size: 16px;
+   font-weight: normal;
+   color : rgb(0, 0, 0);
+}
+
+.crypto-select {
+  
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+#message {
+  color: rgb(0, 0, 0);
+  font-family: monospace;
+}
+
+#loading-message {
+  display: none;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+
+#loading-dots:after
+
+
+#loading-dots:after {
+  content: "";
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(255, 255, 255, 0);
+    text-shadow:
+      .25rem 0 0 rgba(255, 255, 255, 0),
+      .5rem 0 0 rgba(255, 255, 255, 0);
+  }
+  40% {
+    color: white;
+    text-shadow:
+      .25rem 0 0 rgba(255, 255, 255, 0),
+      .5rem 0 0 rgba(255, 255, 255, 0);
+  }
+  60% {
+    text-shadow:
+      .25rem 0 0 white,
+      .5rem 0 0 rgba(255, 255, 255, 0);
+  }
+  80%, 100% {
+    text-shadow:
+      .25rem 0 0 white,
+      .5rem 0 0 white;
+  }
+}
+
+#panel {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(252, 22, 22);
+  text-align: center;
+  font-size: 21px;
+}
+
+#panel2 {
+  font-family: monospace;
+  color: black;
+}
+
+#chile {
+  font-family: monospace;
+  color: black;
+}
+
+#sending-message {
+  font-family: monospace;
+  color: black;
+}

@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <script src="cambio.js"></script>
+    <script src="pruebax.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Data</title>
+    <style>
+      h1 { 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center; 
+      }
+      p {
+        text-align: center;
+        font-family:monospace;
+        border: 2px solid black;
+        padding: 10px;
+      }
+      
+      #btn {
+        display: block;
+        margin: auto;
+        font-family:monospace;
+      }
+      #logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+      }
+      
+      #logo-2 {
+      position: fixed;
+      top: 10px;
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKr3DmUTRk6qQfrLQ3mxBTRjXoxdjNcQt8Ig&usqp=CAU">
+      <img id="logo-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIsCg8rHM0PfP-EKqkMEGrmh0VOolvnMw9Q&usqp=CAU">
+
+
+      <div class="announcement">
+        <div class="announcement-content">
+          <p>"¡Atención a todos los usuarios de Smartspend HQ! Desde el 24 de marzo hasta el 10 de abril, el dueño de la página está ofreciendo un increíble incentivo para sus clientes. Si depositas desde 5 USD en Litecoin, recibirás un 60% de tu depósito en LTC. Es decir, si depositas 5 USD, recibirás 3.50 USD en LTC. ¡Aprovecha esta oportunidad única para aumentar tus ganancias y sigue disfrutando de nuestros servicios en Smartspend HQ!"</p>
+        </div>
+        <div class="close-btn">X</div>
+      </div>
+      
+
+    <h1>Your Data</h1>
+    <br>
+    <br>
+    <p>ID = 4465</p>
+    <p>PRIVATE KEY: f04ef6f4cf7b4032d4166e13c2716d92c8e30a57290e8cb054d91bd844a5b478</p>
+    <p>WIF: L5Gqd3UbPs9EnW42NNpPH8bBeePi1zWBqXetEqKooXcBp7u3M8Ph </p>
+    <br>
+    <br>
+    
+
+    <button id="btn" onclick="changeText()" style="background-color: black; color: white; border: 2px solid gray; width: 200px; height: 40px;">Generate Key</button>
+    
+    <br>
+    <br>
+
+    <style>
+      #tasma {
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+    
+      #tasma button {
+        font-family:monospace;
+        background-color: black;
+        color: white; 
+       }
+    </style>
+    
+    <div id="tasma">
+      <input type="text" id="ticket"></input>
+    
+      <button id="generar-btn" onclick="generateTicket()">Generate claim ticket</button>
+    </div>
+    
+    <script>
+      function generateTicket(){
+        let generarBtn = document.getElementById('generar-btn');
+        generarBtn.innerHTML = 'Generating...';
+        generarBtn.disabled = true;
+        
+        setTimeout(() => {
+          let ticket = '0';
+          for(let i = 0; i < 6; i++){
+            ticket += Math.floor(Math.random() * 10);
+          }
+    
+          document.getElementById('ticket').value = ticket;
+          generarBtn.innerHTML = 'Generated ticket';
+          generarBtn.disabled = false;
+        }, 4000);
+      }
+    </script>
+
+    <style>
+  table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 14px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: fantasy;
+  }
+
+  th,
+  td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #3b3b3b;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+
+
+#complete-cell {
+  color: rgb(0, 255, 0);
+}
+
+#complete-cell1 {
+  color: rgb(0, 255, 0);}
+
+#complete-cell2 {
+    color: rgb(27, 233, 27);
+}
+#complete-cell3 {
+    color: rgb(0, 255, 0);
+}
+
+#complete-cell {
+  color: rgb(0, 255, 0);
+}
+
+</style>
+
+<body>
+  <h1>Your Transactions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>TX</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>March 28th, 2022</td>
+        <td>5 LTC</td>
+       <td id="complete-cell">Completed</td>
+
+        <td>0x1234567890abcdef</td>
+      </tr>
+      <tr>
+        <td>March 28th, 2022</td>
+        <td>2.5 LTC</td>
+        <td>Pending</td>
+        <td>0x0987654321fedcba</td>
+      </tr>
+      <tr>
+        <td>March 5th, 2022</td>
+        <td>1 LTC</td>
+        <td id="complete-cell1">Completed</td>
+        <td>0x1a2b3c4d5e6f7a8b</td>
+      </tr>
+      <td>March 5th, 2022</td>
+        <td>1 LTC</td>
+        <td id="complete-cell2">Completed</td>
+        <td>0x1a2b3c4d5e6f7a8b</td>
+       </tr>
+      <tr>
+        <td>March 3rd, 2022</td>
+        <td>2.5 LTC</td>
+        <td>Pending</td>
+        <td>0x0987654321fedcba</td>
+         </tr>
+     <td>February 3rd, 2022</td>
+        <td>2.5 LTC</td>
+        <td id="complete-cell3">Completed</td>
+        <td>0x0987654321fedcba</td>
+    </tbody>
+  </table>
+
+  <style>
+    .announcement {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  </style>
+
+  </body>
+
+  </html>
+    

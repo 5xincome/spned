@@ -1,0 +1,184 @@
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 18px;
+    border: 2px solid black ;
+    border-radius: 12px;
+    padding: 2px 24px;
+    cursor: pointer;
+    font-family: fantasy;
+    font-style: italic; 
+    align-items: center;
+  }
+  
+  button:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  input[type="text"] {
+    padding: 2px;
+    font-size: 12px;
+    border-width: 5px;
+    border-color: #141212;
+    background-color: #ffffff;
+    color: #100202;
+    border-style: inset;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+    text-shadow: -50px 0px 0px rgba(66,66,66,0);
+    max-width: 100%;
+  }
+  
+  input[type="text"]:focus {
+    outline:none;
+    max-width: 100%;
+  }
+  
+  .double-spend-input {
+    padding: 4px;
+    font-size: 14px;
+    text-align:end;
+    border-style: ridge;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #000000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: initial;
+    font-weight: normal;
+    box-shadow: 0px 0px 5px 0px rgba(42,42,42,.64);
+  }
+  
+  .double-spend-input:focus {
+    outline: none;
+  }
+  
+  #double-spend-amount  {
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: monospace;
+  }
+  
+  #crypto-select {
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: monospace;
+  }
+  
+  #warning-msg.warning-message {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .enviar-btn {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border: none;
+    display: block;
+  margin: 0 auto;
+  border: 1px solid black ;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+  }
+  
+  #reddit-resumen {
+    font-family:monospace;
+    font-style: inherit;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(0, 0, 0);
+    background-color: rgb(196, 33, 33);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  #reddit-resumen2 {
+    font-family: monospace;
+    font-style: inherit;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(10, 1, 1);
+    background-color: rgb(196, 33, 33);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  #reddit-resumen3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+    font-size: 18px;
+    color:rgb(0, 0, 0)
+    
+  }
+  
+  footer {
+    position:inherit;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace
+  }
+  
+  /* solo inputs */
+  
+  #deposit-address {
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 4px;
+    outline: none; 
+  }
+  
+  #direccion {
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 4px;
+    outline: none; 
+  }
+  
+  #double-spend-address {
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 4px;
+    outline: none; 
+  }
+  
+  #emailaddress {
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 4px;
+    outline: none; 
+  }
+  
+  .zpinner {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  #vivo {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #vivo2 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

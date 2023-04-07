@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Balance de Litecoin</title>
+    <link rel="stylesheet" href="tablas.css">
+    <script src="pruebax.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+     *
+      {
+        margin:0px;
+        padding:0px;
+      }  
+
+      #xperia {
+        font-family: monospace;
+        text-align: center;
+        font-size: 24px;
+      }
+      #particles-js
+        {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index:-1;
+            position: absolute;
+
+        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+      }
+      .icon {
+        margin-top: 50px;
+      }
+      .balance {
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .transactions {
+        margin-top: 50px;
+        font-size: 18px;
+       font-family: monospace;
+      }
+      .withdrawals {
+        margin-top: 20px;
+      }
+      .earn {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+      }
+
+      table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 14px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  
+  th,
+  td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #3b3b3b;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  
+
+
+  .icon-container {
+  margin-bottom: 10px;
+}
+
+.icon-container span {
+  display: block;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.icon2-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon2 {
+
+ width: 35px;
+height: 35px;
+
+}
+ 
+
+.payeer-account {
+  margin-left: 10px;
+  font-family: monospace;
+  font-size: 14px
+}
+
+.cuenta
+{
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 14px
+}
+
+.cuenta11
+{
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px
+}
+
+#retorno
+{
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family:monospace;
+}
+
+.announcement {
+  position: relative;
+  background-color: rgba(41, 40, 40, 0.788);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  color:rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+.close-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+</style>
+
+  </head>
+  <h1 id="earn">Reclaim Retorn</h1>
+   <br>
+
+   <div class="announcement">
+    <div class="announcement-content">
+      <p>"To all Smartspend HQ users From March 24 to April 10, the page will be giving 60% return of a deposit in litecoin as a result of the commissions that are made every day using our services, from 5 usd onwards in any crypto of the page. As a team we will continue to bring more promotions for our most loyal users and continue to enjoy our services at Smartspend HQ!"</p>
+    </div>
+    <div class="close-btn">X</div>
+  </div>
+  
+
+  <body>
+
+    <main id="xperia">
+
+        <div class="icon-container">
+          <img class="icon" src="https://cdn2.iconfinder.com/data/icons/bitcoin-73/128/litecoin-64.png" alt=" Icono de Litecoin">
+          <br>
+          <br>
+          <span id="retorno"> The return of 60% will be made only in payeer and faucet Pay, if you do not have one, create one </span>
+ <br>
+
+          <div class="icon2-container">
+            <img class="icon2" src="https://static.openfintech.io/payment_methods/payeer/icon.png?w=278&c=v0.59.26#w100" alt="Icono de Payeer">
+            <span class="payeer-account">Payeer Account :</span> <span class ="cuenta"> P1094063301</span>
+          </div>
+          <br>
+        
+
+
+    <div class="balance">Litecoin Balance:</div> <span class ="cuenta11"> 0.6951</span>
+
+    <br>
+    <button class="withdraw-button" style="background-color: rgb(42, 135, 197); font-size:20px; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; border: 1px solid black; padding: 5px;border-radius: 5px"> Withdraw </button>
+
+
+
+    <div class="transactions">Last Transactions:</div>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>TX</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>April 5th, 2022</td>
+          <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.0683 LTC</td>
+          <td id="complete-cell">Completed</td>
+          <td id="uriel">2bba05ed286a2ea6c..</td>
+        </tr>
+        <tr>
+          <td>April 4th, 2022</td>
+          <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.1441 LTC</td>
+          <td id="complete-cell44">Completed</td>
+          <td id="uriel45">3525f04f5ce9565f77..</td>
+        </tr>
+        <tr>
+          <td>March 31th, 2022</td>
+          <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.0957 LTC</td>
+          <td id="complete-cell1">Completed</td>
+          <td id="uriel1">5c5ad45e3b4654a6..</td>
+        </tr>
+        <td>March 31th, 2022</td>
+        <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.2190 LTC</td>
+          <td id="complete-cell2">Completed</td>
+          <td id="uriel2">5bb1f07fdb818efca..</td>
+         </tr>
+        <tr>
+          <td>March 28th, 2022</td>
+          <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.0479 </td>
+          <td id="complete-cell241">Complete</td>
+          <td id="uriel44">6e5af33272e7342d..</td>
+           </tr>
+       <td>March 25th, 2022</td>
+       <td style="background-image: url('https://cdn0.iconfinder.com/data/icons/business-finance-1-1/128/currency-litecoin-64.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px; background-position: 10px center; text-align: center;">0.01655 LTC</td>
+          <td id="complete-cell3">Completed</td>
+          <td id="uriel3">30dd746115edf9c0..</td>
+      </tbody>
+    </table>
+
+
+</main>
+
+<div id="particles-js"> </div>
+
+<script src="particles.min.js"> </script>
+
+<script>
+  particlesJS({
+  "particles": {
+    "number": {
+      "value": 147,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#0082b9"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 2,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+})
+</script>
+
+
+
+  </body>
+
+</html>
